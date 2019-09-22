@@ -16,24 +16,14 @@ public class V_Crypta {
 		
 		int[] integersKey = vigenereDecryptCrypta(ct);
 		byte[] byteKey = convertKey(integersKey);
+		byte[] pt = vigenereDecipher(ct, integersKey);
 		
 		// Print out the key word
 		System.out.println("The key is most likely to be: " + new String(byteKey));
+		System.out.println(new String(pt));
 	}
 	
-	// Method for getting the key word from an int array
-	public static byte[] convertKey(int[] keyInIntegers) {
-		byte[] result = new byte[keyInIntegers.length];
-		
-		for(int i = 0; i < keyInIntegers.length; i++) {
-			result[i] = (byte) ('A' + keyInIntegers[i]);
-		}
-		
-		return result;
-	}
-	
-	
-	// Method for decrypting Caesar cipher cryptanalyticly, and return the possible key
+	// Method for decrypting Vigenere cipher cryptanalyticly, and return the possible key
 	public static int[] vigenereDecryptCrypta(byte[] cipher) {
 		
 		// Variables declarations
@@ -58,6 +48,31 @@ public class V_Crypta {
 		System.out.print("\n");
 		
 		return key;
+	}
+	
+	// Method for decrypting a Vigenere cipher text by a given key
+	public static byte[] vigenereDecipher(byte[] cipher, int[] key) {
+		
+		byte[] plain = new byte[cipher.length];
+		int counter = 0;
+		
+		for(int i = 0; i < cipher.length; i++) {
+			plain[i] = (byte) ((cipher[i] - 'A' - key[counter] + 26) % 26 + 'A');
+			counter = (counter + 1) % key.length;
+		}
+		
+		return plain;
+	}
+	
+	// Method for getting the key word from an int array
+	public static byte[] convertKey(int[] keyInIntegers) {
+		byte[] result = new byte[keyInIntegers.length];
+		
+		for(int i = 0; i < keyInIntegers.length; i++) {
+			result[i] = (byte) ('A' + keyInIntegers[i]);
+		}
+		
+		return result;
 	}
 	
 	// Method for determine the key length
