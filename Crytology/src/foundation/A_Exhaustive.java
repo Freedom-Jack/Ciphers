@@ -25,7 +25,7 @@ public class A_Exhaustive {
 	}
 
 	
-	//
+	// Method for decrypting Caesar cipher exhaustively, and return the position of the possible key
 	public static int affineDecryptExhaust(byte[] cipher) {
 		
 		int[] alphaCandidate = { 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 };
@@ -47,22 +47,12 @@ public class A_Exhaustive {
 				}
 
 				// Calculate the dot product and prompt
-				dotProductArray[counter++] = dotProduct(freq, CryptoTools.ENGLISH);
-				System.out.println("Key: (" + alphaCandidate[i] + ", " + j + "); " + "Dot product: " + dotProductArray[i]);
-			}
-		}
-
-		// Find the biggest value, which is most likely to be the key
-		double temp = 0;
-		int pos = 0;
-		for (int i = 0; i < 312; i++) {
-			if (dotProductArray[i] > temp) {
-				temp = dotProductArray[i];
-				pos = i;
+				dotProductArray[counter] = dotProduct(freq, CryptoTools.ENGLISH);
+				System.out.println("Key: (" + alphaCandidate[i] + ", " + j + "); " + "Dot product: " + dotProductArray[counter++]);
 			}
 		}
 		
-		return pos;
+		return findMaxPos(dotProductArray);
 	}
 	
 	
@@ -91,5 +81,22 @@ public class A_Exhaustive {
 		}
 
 		return answer;
+	}
+	
+	// Method for finding the max value's position in an array
+	public static int findMaxPos(double[] ar) {
+		
+		// Selective selection
+		double temp = 0;
+		int pos = 0;
+		
+		for (int i = 0; i < ar.length; i++) {
+			if (ar[i] > temp) {
+				temp = ar[i];
+				pos = i;
+			}
+		}
+		
+		return pos;
 	}
 }

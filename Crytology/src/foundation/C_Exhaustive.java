@@ -36,17 +36,7 @@ public class C_Exhaustive {
 			System.out.println("Key: " + i + "; " + "Dot product: " + dotProductArray[i]);
 		}
 
-		// Find the biggest value, which is most likely to be the key
-		double temp = 0;
-		int pos = 0;
-		for (int i = 0; i < 26; i++) {
-			if (dotProductArray[i] > temp) {
-				temp = dotProductArray[i];
-				pos = i;
-			}
-		}
-
-		return pos;
+		return findMaxPos(dotProductArray);
 	}
 
 	// Method for decrypting Caesar cipher using a given key
@@ -74,5 +64,22 @@ public class C_Exhaustive {
 		}
 
 		return answer;
+	}
+	
+	// Method for finding the max value's position in an array
+	public static int findMaxPos(double[] ar) {
+		
+		// Selective selection
+		double temp = 0;
+		int pos = 0;
+		
+		for (int i = 0; i < ar.length; i++) {
+			if (ar[i] > temp) {
+				temp = ar[i];
+				pos = i;
+			}
+		}
+		
+		return pos;
 	}
 }
