@@ -25,7 +25,7 @@ public class C_Crypta {
 		for (int i = 0; i < 26; i++) {
 			freq[i] = (double) letterCounts[i] / cipher.length;
 
-			System.out.println("Letter: " + i + "; Frequency: " + freq[i]);
+			//System.out.println("Letter: " + i + "; Frequency: " + freq[i]);
 		}
 		
 		// Find the letter has maximum frequency, which is most likely to be 'E' in pt

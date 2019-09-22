@@ -93,7 +93,7 @@ public class V_Crypta {
 				byte[] sample = sampling(cipher, i, 0);
 			
 				valuesArray[i - 1] = CryptoTools.getIC(sample);
-				System.out.println("Key length: " + i + "; IC: " + valuesArray[i - 1]);
+				//System.out.println("Key length: " + i + "; IC: " + valuesArray[i - 1]);
 			}
 		
 			results[loop] = closestPos(valuesArray, target);

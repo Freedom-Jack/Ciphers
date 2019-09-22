@@ -48,7 +48,8 @@ public class A_Exhaustive {
 
 				// Calculate the dot product and prompt
 				dotProductArray[counter] = dotProduct(freq, CryptoTools.ENGLISH);
-				System.out.println("Key: (" + alphaCandidate[i] + ", " + j + "); " + "Dot product: " + dotProductArray[counter++]);
+				//System.out.println("Key: (" + alphaCandidate[i] + ", " + j + "); " + "Dot product: " + dotProductArray[counter]);
+				counter++;
 			}
 		}
 		

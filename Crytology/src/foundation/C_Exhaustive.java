@@ -33,7 +33,7 @@ public class C_Exhaustive {
 			
 			// Calculate the dot product and prompt
 			dotProductArray[i] = dotProduct(freq, CryptoTools.ENGLISH);
-			System.out.println("Key: " + i + "; " + "Dot product: " + dotProductArray[i]);
+			//System.out.println("Key: " + i + "; " + "Dot product: " + dotProductArray[i]);
 		}
 
 		return findMaxPos(dotProductArray);
