@@ -25,7 +25,7 @@ public class A_Exhaustive {
 	}
 
 	
-	//
+	// Method for decrypting Caesar cipher exhaustively, and return the position of the possible key
 	public static int affineDecryptExhaust(byte[] cipher) {
 		
 		int[] alphaCandidate = { 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 };
