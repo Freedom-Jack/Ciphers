@@ -11,7 +11,7 @@ import util.CryptoTools;
 
 public class Q3 {
 
-	//This algorithm is DES, SAE mode of operation, PKSC5 PADDING	 
+	// This algorithm is DES, SAE mode of operation, PKSC5 PADDING
 	public static void main(String[] args) throws Exception {
 
 		// Initialize string inputs for one test case
