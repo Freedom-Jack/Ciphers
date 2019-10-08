@@ -14,6 +14,7 @@ public class V_Crypta {
 		byte[] rawct = CryptoTools.fileToBytes("data/MSG4.ct");
 		byte[] ct = CryptoTools.clean(rawct);
 		
+		// Invoke the cryptanalytic method to get the plain text 
 		int[] integersKey = vigenereDecryptCrypta(ct);
 		byte[] byteKey = convertKey(integersKey);
 		byte[] pt = vigenereDecipher(ct, integersKey);

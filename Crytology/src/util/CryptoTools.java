@@ -137,7 +137,7 @@ public class CryptoTools {
 
 		// Initialize the counter and trials number
 		int count = 0;
-		int trials = 1000;
+		int trials = 5000;
 
 		// Run the trials
 		for (int i = 0; i < trials; i++) {

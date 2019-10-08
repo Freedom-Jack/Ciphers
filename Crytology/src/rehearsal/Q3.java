@@ -11,6 +11,7 @@ import util.CryptoTools;
 
 public class Q3 {
 
+	//This algorithm is DES, SAE mode of operation, PKSC5 PADDING	 
 	public static void main(String[] args) throws Exception {
 
 		// Initialize string inputs for one test case
@@ -39,29 +40,30 @@ public class Q3 {
 	}
 
 	// CryptoEngine for one single block, return the result in byte array
-	public static byte[] cryptoEngine(byte[] key, byte[] iv, byte[] text, boolean is_encrypt, boolean is_last) throws Exception {
+	public static byte[] cryptoEngine(byte[] key, byte[] iv, byte[] text, boolean is_encrypt, boolean is_last)
+			throws Exception {
 
 		// Instantiate cipher
 		Key symmetric_key = new SecretKeySpec(key, "DES");
+		// Only the last block has padding
 		Cipher customized_cipher = Cipher.getInstance("DES/ECB/NoPadding");
 		Cipher last_cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
-		
-		// Variables set up
+
+		// Variables setup
 		byte[] text_temp = text.clone();
 		byte[] result = new byte[text.length];
-		
+
 		// Cipher set up
 		if (is_encrypt) {
 			customized_cipher.init(Cipher.ENCRYPT_MODE, symmetric_key);
 			last_cipher.init(Cipher.ENCRYPT_MODE, symmetric_key);
-		}
-		else {
+		} else {
 			customized_cipher.init(Cipher.DECRYPT_MODE, symmetric_key);
 			last_cipher.init(Cipher.DECRYPT_MODE, symmetric_key);
-			
+
 			text_temp = xor(text, iv);
 		}
-		
+
 		// Cipher process
 		if (is_last)
 			result = last_cipher.doFinal(text_temp);
