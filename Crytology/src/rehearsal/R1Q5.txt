@@ -1,0 +1,20 @@
+Question:
+Consider a cryptosystem (P, C, K, E, D) in which E is a block cipher of size N 
+(i.e. it operates on N plaintext letters at a time to produce N ciphertext letters) and in which the key consists of M letters,
+where M < N. We don't know the cipher's algorithm (it may not be any of the ones we studied in this course) 
+but we know that it is a group cipher (i.e. closed under composition). Prove that for any given plaintext block p and key k:
+	  ∃x ≤ 26M : Ex(k,p) = p
+where Ex denotes composition x times. In words, 
+this means repeatedly encrypting p with the same key k will eventually lead back to p after at most 26M repetitions. 
+Example with x=2: if encrypting p with k yields some ciphertext c then encrypting c with the same key k yields p.
+
+
+
+Answer:
+The key consists of M letters, so the number of possible keys is 26^M. Block size is N letters, 
+so the number of possible plain text is 26^N. M < N, so 26^M < 26^N. Since this is a group cipher, 
+there is a shortcut key for Ex(k,p). 
+
+Assume that after each encryption, Ex(k,p) gives us a different cipher text everytime, so after 26^M times, i.e. E(26^M)(k,p), 
+at 26^M + 1 times, all the keys have been used as shortcut key already. Therefore, at 26^M + 1, 
+its shortcut key must be one of 26^M earlier, which will bring us back to the original plain text. 

@@ -1,6 +1,7 @@
 package foundation;
 
 import util.CryptoTools;
+import foundation.C_Exhaustive;
 
 public class C_Crypta {
 	
@@ -15,6 +16,7 @@ public class C_Crypta {
 		
 		// Print out the key
 		System.out.println("The key is most likely to be: " + key);
+		System.out.println(new String(C_Exhaustive.caesarDecrypt(ct, key)));
 	}
 	
 	// Method for decrypting Caesar cipher cryptanalyticly, and return the possible key
