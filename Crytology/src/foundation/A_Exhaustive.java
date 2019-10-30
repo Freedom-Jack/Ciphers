@@ -14,6 +14,7 @@ public class A_Exhaustive {
 		
 		int[] alphaCandidate = { 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25 };
 		
+		// Find the position of alpha in the alphaCanadidate array
 		int position = affineDecryptExhaust(ct);
 
 		// Print the key and prompt
