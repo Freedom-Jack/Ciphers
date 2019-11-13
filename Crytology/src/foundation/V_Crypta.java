@@ -28,8 +28,8 @@ public class V_Crypta {
 	public static int[] vigenereDecryptCrypta(byte[] cipher) {
 		
 		// Variables declarations
-		int lengthLimits = 50;	// Limit of the size of the key word
-		double targetIC = 0.067;	// Target index of coincidence
+		int lengthLimits = 50;	// Limit of the maximum size of the key word
+		double targetIC = 0.067;	// Target index of coincidence (English)
 				
 		// Find the key length
 		int keyLength = keyLengthFind(cipher, lengthLimits, targetIC);
@@ -88,7 +88,7 @@ public class V_Crypta {
 		// Loop for finding candidate lengths
 		for (int loop = 0; loop < trials; loop++) {
 			
-			// Find the best key for current trials
+			// Find the best key for current trials by comparing IC
 			for (int i = 1; i <= limit; i++) {
 				
 				byte[] sample = sampling(cipher, i, 0);
