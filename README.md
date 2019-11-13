@@ -4,13 +4,13 @@ Here are some cool ciphers I want to show you guys.
 
 Parts:
 1. Classic cipher
-  * Caesar
-  * Affine
-  * Vigenere
+   * Caesar
+   * Affine
+   * Vigenere
 2. Symmetric cipher
-  * DES / AES
+   * DES / AES
 3. Asymmetric cipher
-  * RSA
+   * RSA
 4. Hash
 
 Updated: 2019-11-12
