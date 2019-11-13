@@ -18,7 +18,7 @@ public class RSA_KnownPrimeFactor {
 				"10358344307803887695931304169230543785620607743682421994532795393937342395753127888522373061586445417642355843316524942445924294144921649080401518286829171");
 	
 		BigInteger d = privateKeyRetrievalNPE(n, p, e);
-		byte[] result = RSA_Decrypt.rsaCipher(n, d, c.toByteArray(), false);
+		byte[] result = RSA_Cryptography.rsaCipher(n, d, c.toByteArray(), false);
 		
 		System.out.println("The plaintext: " + new String(result).trim());
 	}
@@ -29,7 +29,7 @@ public class RSA_KnownPrimeFactor {
 		// Calculate q from n and p, to find phi = (p-1)(q-1) = pq-p-q+1
 		BigInteger otherFactor = modulos.divide(primeFactor);
 		BigInteger totient = primeFactor.multiply(otherFactor).subtract(primeFactor).subtract(otherFactor)
-				.add(new BigInteger("1"));
+				.add(BigInteger.ONE);
 		
 		// Calculate the private key
 		BigInteger privateKey = publicKey.modInverse(totient);
