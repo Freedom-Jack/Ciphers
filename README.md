@@ -2,7 +2,8 @@
 
 Here are some cool ciphers I want to show you guys.
 
-Breakdown:
+
+## Breakdown:
 1. Classic cipher
    * Caesar
    * Affine
