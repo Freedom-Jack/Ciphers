@@ -20,7 +20,7 @@ public class RSA_KnownTotient {
 		BigInteger n = modulosRetrieval(p, q);
 		
 		// Decipher
-		byte[] result = RSA_Decrypt.rsaCipher(n, d, c.toByteArray(), false);
+		byte[] result = RSA_Cryptography.rsaCipher(n, d, c.toByteArray(), false);
 		
 		System.out.println("The plaintext: " + new String(result).trim());
 	}
@@ -32,7 +32,7 @@ public class RSA_KnownTotient {
 	
 	// Retrieve the other prime factor, based on one prime factor and totient
 	public static BigInteger primeFactorRetrieval(BigInteger totient, BigInteger primeFactor) {
-		return totient.divide(primeFactor.subtract(new BigInteger("1"))).add(new BigInteger("1"));
+		return totient.divide(primeFactor.subtract(BigInteger.ONE)).add(BigInteger.ONE);
 	}
 	
 	// Retrieve private key, based on totient "phi", and public key "e"

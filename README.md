@@ -2,9 +2,16 @@
 
 Here are some cool ciphers I want to show you guys.
 
-Parts:\n
-Classic cipher\n
-Symmetric cipher\n
-Asymmetric cipher\n
 
-Updated: 2019-11-02
+## Breakdown:
+1. Classic cipher
+   * Caesar
+   * Affine
+   * Vigenere
+2. Symmetric cipher
+   * DES / AES
+3. Asymmetric cipher
+   * RSA
+4. Hash
+
+Updated: 2019-11-12
