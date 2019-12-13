@@ -32,7 +32,7 @@ public class Signature {
 		System.out.println("The sent final message with signature:");
 		System.out.println(signaturedMessage + "\n");
 		
-		// Doublecheck the message correctness
+		// Double-check the message correctness
 		System.out.println("Sender Integrity: " + verifySenderIntegrity(signaturedMessage, n, e));
 	}
 	

@@ -13,14 +13,20 @@ public class HMAC {
 		// Information for HMAC
 		byte[] m = "Mainly cloudy with 40 percent chance of showers".getBytes();
 		byte[] k = "This is an ultra-secret key".getBytes();
+		String hashMethod = "SHA-1";
+		int block_size_in_byte = 64;
 		String constant1 = "5c";
 		String constant2 = "36";
 
-		byte[] result1 = hmac_general(k, m, "SHA-1", 64, constant1, constant2);
-		byte[] result2 = hmac_general(k, m, "SHA-1", 64, constant2, constant1);
+		byte[] result1 = hmac_general(k, m, hashMethod, block_size_in_byte, constant1, constant2);
+		byte[] result2 = hmac_general(k, m, hashMethod, block_size_in_byte, constant2, constant1);
 		
-		System.out.println("5c, 36: " + CryptoTools.bytesToHex(result1));
-		System.out.println("36, 5c: " + CryptoTools.bytesToHex(result2));
+		// Information print out
+		System.out.println("Message: " + new String(m));
+		System.out.println("Secret key: " + new String(k));
+		System.out.println("Hash function: " + hashMethod + "\n");
+		System.out.println("HMAC(5c, 36): " + CryptoTools.bytesToHex(result1) + " (Ordinary)");
+		System.out.println("HMAC(36, 5c): " + CryptoTools.bytesToHex(result2));
 	}
 
 	// Method for HMAC in general
@@ -47,15 +53,15 @@ public class HMAC {
 
 	// Method for bitwise xor on two byte arrays
 	public static byte[] bitwise_xor(byte[] input1, byte[] input2) throws Exception {
-
+		
+		// To xor, 2 input arrays must be equal length
 		if (input1.length != input2.length)
 			throw new Exception();
 
 		byte[] result = new byte[input1.length];
 
-		for (int i = 0; i < input1.length; i++) {
+		for (int i = 0; i < input1.length; i++)
 			result[i] = (byte) (input1[i] ^ input2[i]);
-		}
 
 		return result;
 	}
@@ -77,7 +83,8 @@ public class HMAC {
 		
 		String result = "";
 		
-		for(int i = 0; i < sizeInByte; i++)
+		// 1Hex = 0.5byte, number of time it repeats is size in byte divided by half of the hex string's length
+		for(int i = 0; i < sizeInByte / padString.length() * 2; i++)
 			result += padString;
 		
 		return CryptoTools.hexToBytes(result);
@@ -87,10 +94,14 @@ public class HMAC {
 	public static byte[] kprimeFinding(byte[] key, String hashing, int sizeInByte) throws Exception {
 		
 		byte[] result;
+		
+		// If key is longer than the block size of hash, hash it
 		if (key.length > sizeInByte)
 			result = CryptoTools.bytesToHex(Signature.generalHash(key, hashing)).getBytes();
+		// Else if the key is shorter, pad (byte)zeros to the right of the key
 		else if (key.length < sizeInByte)
 			result = zerosRight(key, sizeInByte);
+		// Else when the key is just the size of the block, do nothing
 		else
 			result = Arrays.copyOf(key, key.length);
 		
@@ -100,6 +111,7 @@ public class HMAC {
 	// Method for padding zero to the left
 	public static byte[] zerosRight(byte[] key, int sizeInByte) throws Exception {
 		
+		// To pad zeros, the key size must be smaller than the block
 		if(key.length > sizeInByte)
 			throw new Exception();
 		
@@ -107,7 +119,7 @@ public class HMAC {
 		
 		outputStream.write(key);
 		for(int i = 0; i < (sizeInByte - key.length); i++)
-			outputStream.write(0);;
+			outputStream.write(0);
 		
 		return outputStream.toByteArray();
 	}

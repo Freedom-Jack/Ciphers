@@ -32,7 +32,7 @@ public class RSA_Cryptography {
         System.out.println("The encrypted plaintext is same as the original ciphertext: " + msg);
 	}
 	
-	// Method for RSA encryption/decryption
+	// Method for RSA encryption/decryption, using ECB/NoPadding operation
 	public static byte[] rsaCipher(BigInteger modulo, BigInteger theKey, byte[] text, boolean is_encrypt) throws Exception{
 		
 		KeyFactory keyFactory = KeyFactory.getInstance("RSA");			// Key initialization

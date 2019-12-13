@@ -17,7 +17,7 @@ public class Sender_Integrity {
 		BigInteger dB = eB.modInverse(pB.subtract(BigInteger.ONE).multiply(qB.subtract(BigInteger.ONE)));
 		BigInteger nB = pB.multiply(qB);
 
-		// Two sent messages: m' and s'
+		// Two sent messages: m' and s', where m' = E(m, eB), s' = E(E(n, dA), eB)
 		BigInteger mprime = new BigInteger("418726553997094258577980055061305150940547956");
 		BigInteger sprime = new BigInteger("749142649641548101520133634736865752883277237");
 
@@ -33,7 +33,6 @@ public class Sender_Integrity {
 	
 	// Customized RSA, which allow arbitrary input size
 	public static BigInteger customizedRSA(BigInteger modulo, BigInteger key, BigInteger text) {
-
 		return text.modPow(key, modulo);
 	}
 }

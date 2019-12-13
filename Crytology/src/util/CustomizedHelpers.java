@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 public class CustomizedHelpers {
 
 	public static void main(String[] args) {
-
+		// Utility class
 	}
 
 	// Method for RSA encryption/decryption
@@ -38,7 +38,7 @@ public class CustomizedHelpers {
 		byte[] pt = rsa_cipher.doFinal(text);
 		return pt;
 	}
-	
+
 	// Method for concatenating two byte arrays
 	public static byte[] twoByteArraysConcatenation(byte[] a, byte[] b) throws Exception {
 
@@ -49,5 +49,10 @@ public class CustomizedHelpers {
 		outputStream.write(b);
 
 		return outputStream.toByteArray();
+	}
+
+	// Customized RSA, which allow arbitrary input size
+	public static BigInteger customizedRSA(BigInteger modulo, BigInteger key, BigInteger text) {
+		return text.modPow(key, modulo);
 	}
 }
