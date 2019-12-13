@@ -12,6 +12,10 @@ Here are some cool ciphers I want to show you guys.
    * DES / AES
 3. Asymmetric cipher
    * RSA
-4. Hash
+   * Chinese Remainder Theorem
+   * Miller-Rabin primality test
+4. Hash fucntion
+   * Signature
+   * MAC/HMAC
 
-Updated: 2019-11-12
+Updated: 2019-12-13
