@@ -32,8 +32,14 @@ In this project (more like codes for fun lol), I want to show some modern crypto
 ### Caesar Cipher
 Caesar cipher is a stream, mono-alphabetic cipher with substitution. The way Caesar Cipher works is by shifting the alphabet down with a fix amount. To decrypt a Caesar cipher, ones can simply shift up the same amount, which is equivalent to shifting down the complement amount in the domain.
 * Key: The shifting amount, an integer
-* Encryption: `(plain_text + shift) % domain_size[English: 26] = cipher_text`
-* Decryption: `(cipher_text+ shift) % domain_size[English: 26] = cipher_text`
+* Encryption: `(plain_text + shift) % domain_size = cipher_text`
+* Decryption: `(cipher_text + domain_size - shift) % domain_size = plain_text`
+
 ![Caesar cipher diagram](images/Caesar.png)
+### Affine Cipher
+Affine cipher is a stream, mono-alphabetic cipher with substitution. The way Affine Cipher works is similar to Caesar cipher, the different is that the shift amount will be determined by a linear equation instead of a number.
+* Key: Two integers **a** and **b**, as the coefficients for a linear equation
+* Encryption: `(a * plain_text + b) % domain_size = cipher_text`
+* Decryption: `(cipher_text - b) / a % domain_size = plain_text`
 
 Updated: 2019-12-22
