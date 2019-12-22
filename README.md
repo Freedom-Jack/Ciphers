@@ -1,7 +1,7 @@
 # Cryptology
 Here are some cool ciphers I want to show you guys.\
 I recommand using Java for Cryptology related stuff because Java has the most up-to-date cryptology libraries.\
-I hope you guys enjoy it!\
+I hope you guys enjoy it!
 
 ## List of Topics:
 1. Classic ciphers
@@ -20,6 +20,9 @@ I hope you guys enjoy it!\
 
 ## Classic ciphers
 1. Caesar cipher
+  * Encryption
+    The way Caesar cipher works is by shifting the alphabec down with a fix amount.
+  * Decryption
 2. Affine cipher
 3. Vigenere 
 
