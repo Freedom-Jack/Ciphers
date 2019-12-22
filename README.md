@@ -20,9 +20,9 @@ I hope you guys enjoy it!
 
 ## Classic ciphers
 1. <b>Caesar cipher</b>
-  * Encryption:\
+    * Encryption:\
     The way Caesar cipher works is by shifting the alphabec down with a fix amount.
-  * Decryption
+    * Decryption
 2. Affine cipher
 3. Vigenere 
 
