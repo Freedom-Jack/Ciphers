@@ -7,7 +7,7 @@ Unlike confidentiality, integrity is not provided by cipher. We need to use some
 * **Availability** means the quality of being able to be used or obtained. In secure communication, it means that the system should be always usable, which often means it sends message at real time.
 Availability is usually provided by the architecture of the secure communication system, which we do not covered.
 
-In this project (more like codes for fun lol), I want to show some modern cryptologies and some techniques which helps in secure communications as well. I recommend using Java for this project and cryptology related stuff because Java has the most up-to-date cryptology libraries.
+In this project (more like codes for fun lol), I want to show some modern cryptologies as well as some techniques which helps in achieving online secure communications nowadays. I recommend using Java for this project and cryptology related stuff because Java has the most up-to-date cryptology libraries.
 
 **I hope you guys enjoy it!**
 
