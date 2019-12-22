@@ -14,7 +14,7 @@ In this project (more like codes for fun lol), I want to show some modern crypto
 **I hope you guys enjoy it!**
 
 ## List of Topics:
-* Classic Ciphers:
+* Classical Ciphers:
    * Caesar
    * Affine
    * Vigenere
@@ -28,14 +28,11 @@ In this project (more like codes for fun lol), I want to show some modern crypto
    * Signature
    * MAC/HMAC
 
-## Classic Ciphers
+## Classical Ciphers
 ### Caesar Cipher
-Caesar cipher is 
-* Encryption:
-The way Caesar Cipher works is by shifting the alphabec down with a fix amount.
-* Decryption:
-In Caesar Cipher, 
-### Affine cipher
-### Vigenere 
+Caesar cipher is a stream, mono-alphabetic cipher with substitution. The way Caesar Cipher works is by shifting the alphabet down with a fix amount. To decrypt a Caesar cipher, ones can simply shift up the same amount, which is equivalent to shifting down the complement amount in the domain.
+* Key: The shifting amount, an integer
+* Encryption: `(plain_text + shift) % domain_size[English: 26] = cipher_text`
+* Decryption: `(cipher_text+ shift) % domain_size[English: 26] = cipher_text`
 
 Updated: 2019-12-22
