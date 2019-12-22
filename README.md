@@ -1,7 +1,7 @@
 # Cryptology
-Here are some cool ciphers I want to show you guys.
-I recommand using Java for Cryptology related stuff because Java has the most up-to-date cryptology libraries.
-I hope you guys enjoy it!
+Here are some cool ciphers I want to show you guys.\n
+I recommand using Java for Cryptology related stuff because Java has the most up-to-date cryptology libraries.\n
+I hope you guys enjoy it!\n
 
 ## List of Topics:
 1. Classic ciphers
