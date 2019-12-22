@@ -47,5 +47,9 @@ Affine cipher is a stream, mono-alphabetic cipher with substitution. The way Aff
 ###  Vigenere cipher
 Vigenere  cipher  is  a  block,  poly-alphabectic  cipher  with  substitution. The three introduced classical ciphers are all about substitutions with different functions to determine the shift amount. For Vigenere  cipher, it is basically a Caesar cipher with the shift amount  determined by a key, which contains the shift amount for a block of text and it is usually an English word.
 * Key: an array of shift amount, i.e. an English word
+
+![Caesar cipher diagram](images/Vigenere.png)
+
 ## Symmetric Ciphers
+
 Updated: 2019-12-22
