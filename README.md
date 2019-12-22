@@ -39,7 +39,13 @@ Caesar cipher is a stream, mono-alphabetic cipher with substitution. The way Cae
 ### Affine Cipher
 Affine cipher is a stream, mono-alphabetic cipher with substitution. The way Affine Cipher works is similar to Caesar cipher, the different is that the shift amount will be determined by a linear equation instead of a number.
 * Key: Two integers **a** and **b**, as the coefficients for a linear equation
+* Note: Coefficient **a** needs to be co-prime with the domain size (why?)
 * Encryption: `(a * plain_text + b) % domain_size = cipher_text`
-* Decryption: `(cipher_text - b) / a % domain_size = plain_text`
+* Decryption: `((cipher_text - b) / a) % domain_size = plain_text`
 
+![Caesar cipher diagram](images/Affine.png)
+###  Vigenere cipher
+Vigenere  cipher  is  a  block,  poly-alphabectic  cipher  with  substitution. The three introduced classical ciphers are all about substitutions with different functions to determine the shift amount. For Vigenere  cipher, it is basically a Caesar cipher with the shift amount  determined by a key, which contains the shift amount for a block of text and it is usually an English word.
+* Key: an array of shift amount, i.e. an English word
+## Symmetric Ciphers
 Updated: 2019-12-22
