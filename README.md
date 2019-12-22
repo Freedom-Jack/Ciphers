@@ -19,7 +19,7 @@ I hope you guys enjoy it!
    * MAC/HMAC
 
 ## Classic ciphers
-1. Caesar cipher
+1. <b>Caesar cipher</b>
   * Encryption:\
     The way Caesar cipher works is by shifting the alphabec down with a fix amount.
   * Decryption
