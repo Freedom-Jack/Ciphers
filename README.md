@@ -34,5 +34,6 @@ Caesar cipher is a stream, mono-alphabetic cipher with substitution. The way Cae
 * Key: The shifting amount, an integer
 * Encryption: `(plain_text + shift) % domain_size[English: 26] = cipher_text`
 * Decryption: `(cipher_text+ shift) % domain_size[English: 26] = cipher_text`
+![Caesar cipher diagram](images/Caesar.png)
 
 Updated: 2019-12-22
