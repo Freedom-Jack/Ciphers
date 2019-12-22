@@ -20,7 +20,7 @@ I hope you guys enjoy it!
 
 ## Classic ciphers
 1. Caesar cipher
-  * Encryption
+  * Encryption:\
     The way Caesar cipher works is by shifting the alphabec down with a fix amount.
   * Decryption
 2. Affine cipher
