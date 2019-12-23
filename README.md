@@ -67,7 +67,7 @@ Very straightforward and yet magically, right? In  fact,  RSA  algorithm is  a  
 
 ### Chinese Remainder Theorem
 Chinese Remainder theorem is a technique which is develop by Chinese military strategist Sun Tzu. It helps in RSA algorithm constructing the original message, the plain text, faster without raising the number to a big power.\
-The original question was asked in a poem, which it says:
+\The original question was asked in a poem, which it says:
 >There are certain things whose number is unknown. If we count them by threes, we have two left over; by fives, we have three left over; and by sevens, two are left over. How many things are there?
 
 ### Miller-Rabin Primality Test
