@@ -63,5 +63,6 @@ RSA consist of three components, a public key and a private key, they two togeth
 Very straightforward and yet magically, right? In  fact,  RSA  is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
 
 ![RSA_2](images/RSA_2.png =345x160)
+<img src="images/RSA_2.png" width="345">
 
 Updated: 2019-12-22
