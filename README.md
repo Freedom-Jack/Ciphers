@@ -57,12 +57,20 @@ DES stands for Data Encryption Standard. It  is  a  block, poly-alphabetic ciphe
 ## Asymmetric Ciphers
 ### RSA
 RSA stands for Rivest–Shamir–Adleman, which is an asymmetric cipher based on the computational difficulty of factoring a large number. Asymmetric cipher is crucial for modern Internet communications because it allows people to have confidentiality without prior meeting.
-RSA consist of three components, a public key and a private key, they two together consist of one pair of asymmetric keys, and a modulus. Here is how it works, ***e*** is the public key, ***d*** is the private key, and ***n*** is the lock:
+RSA algorithm consist of three components, a public key and a private key, they two together consist of one pair of asymmetric keys, and a modulus. Here is how it works, ***e*** is the public key, ***d*** is the private key, and ***n*** is the lock:
 
 <img src="images/RSA_workflow.png" width="250">
 
-Very straightforward and yet magically, right? In  fact,  RSA  is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
+Very straightforward and yet magically, right? In  fact,  RSA  algorithm is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
 
-<img src="images/RSA_generation.png" width="250">
+<img src="images/RSA_generation.png" width="325">
 
-Updated: 2019-12-22
+### Chinese Remainder Theorem
+Chinese Remainder theorem is a technique which is develop by Chinese military strategist Sun Tzu. It helps in RSA algorithm constructing the original message, the plain text, faster without raising the number to a big power.
+
+### Miller-Rabin Primality Test
+Miller-Rabin Primality test is a test utilize the contraposition of Fermat's little theorem and square root test. It is one of the simplest test for a number's primality, which helps us to find the two prime factors during our RSA cipher generation process.
+
+---
+Author: Qijin(Jack) Xu
+Lastly Updated: 2019-12-22
