@@ -51,5 +51,19 @@ Vigenere  cipher  is  a  block,  poly-alphabectic  cipher  with  substitution. T
 ![Caesar cipher diagram](images/Vigenere.png)
 
 ## Symmetric Ciphers
+### DES / AES
+DES stands for Data Encryption Standard. It  is  a  block, poly-alphabetic cipher and  it  is  the most  common  method for encrypting static information nowadays. AES is  very  similar to DES except  it  has  a bigger block size than 64  bits.
+
+## Asymmetric Ciphers
+### RSA
+RSA stands for Rivest–Shamir–Adleman, which is an asymmetric cipher based on the computational difficulty of factoring a large number. Asymmetric cipher is crucial for modern Internet communications because it allows people to have confidentiality without prior meeting.
+RSA consist of three components, a public key and a private key, they two together consist of one pair of asymmetric keys, and a modulus. Here is how it works, ***e*** is the public key, ***d*** is the private key, and ***n*** is the lock:
+$$pt^e = ct\ (mod\ n)\\
+ct^d = pt\ (mod\ n)$$
+
+Very straightforward and yet magically, right? In  fact,  RSA  is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
+$$n=pq\\
+\varphi(n)=(p-1)(q-1)\\
+ed=1\ (mod\ n)$$
 
 Updated: 2019-12-22
