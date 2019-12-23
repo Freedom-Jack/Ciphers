@@ -71,6 +71,15 @@ Chinese Remainder theorem is a technique which is develop by Chinese military st
 ### Miller-Rabin Primality Test
 Miller-Rabin Primality test is a test utilize the contraposition of Fermat's little theorem and square root test. It is one of the simplest test for a number's primality, which helps us to find the two prime factors during our RSA cipher generation process.
 
+## Cryptological Hash Fucntions and Applications
+### Signature
+One of the use cases of cryptographic hash function in secure communication is signature. The signature is actually the hashed value of the message, which usually send with the message itself. By comparing the signature and the hash generated from the received message, the receiver can tell whether the message is genuine or not.
+
+### MAC/HMAC
+MAC or HMAC stands for **hash-based message authentication code**, it is a specific type authentication method using cryptographic hash functions. It provides data integrity and sender integrity to the secure communication system.
+
+![HMAC](images/HMAC.png)
+
 ---
-Author: Qijin(Jack) Xu
+Author: Qijin(Jack) Xu\
 Lastly Updated: 2019-12-22
