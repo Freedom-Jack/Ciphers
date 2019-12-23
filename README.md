@@ -62,8 +62,8 @@ $$pt^e = ct\ (mod\ n)\\
 ct^d = pt\ (mod\ n)$$
 
 Very straightforward and yet magically, right? In  fact,  RSA  is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
-$$n=pq\\
+$n=pq\\
 \varphi(n)=(p-1)(q-1)\\
-ed=1\ (mod\ n)$$
+ed=1\ (mod\ n)$
 
 Updated: 2019-12-22
