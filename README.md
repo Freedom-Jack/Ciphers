@@ -58,7 +58,8 @@ DES stands for Data Encryption Standard. It  is  a  block, poly-alphabetic ciphe
 ### RSA
 RSA stands for Rivest–Shamir–Adleman, which is an asymmetric cipher based on the computational difficulty of factoring a large number. Asymmetric cipher is crucial for modern Internet communications because it allows people to have confidentiality without prior meeting.
 RSA consist of three components, a public key and a private key, they two together consist of one pair of asymmetric keys, and a modulus. Here is how it works, ***e*** is the public key, ***d*** is the private key, and ***n*** is the lock:
-<img src="images/RSA_2.png" width="345">
+<img src="images/RSA_1.png" width="345">
+
 Very straightforward and yet magically, right? In  fact,  RSA  is  a  discovery  and  real-life  application from the famous Euler's  theorem. Here  is  how it gets  generated, note that  ***p***  and  ***q***  are  prime numbers:
 <img src="images/RSA_2.png" width="345">
 
