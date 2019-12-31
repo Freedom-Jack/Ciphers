@@ -19,14 +19,14 @@ In this project (more like codes for fun lol), I want to show some modern crypto
    * [Affine](#affine-cipher)
    * [Vigenere](#vigenere-cipher)
 * Symmetric Ciphers:
-   * [DES / AES](#des-/-aes)
+   * [DES / AES](#des--aes)
 * Asymmetric Ciphers:
    * [RSA](#rsa)
    * [Chinese Remainder Theorem](#chinese-remainder-theorem)
    * [Miller-Rabin Primality Test](#miller-rabin-primality-test)
 * Cryptological Hash Fucntions and Applications:
    * [Signature](#signature)
-   * [MAC / HMAC](#mac-/-hmac)
+   * [MAC / HMAC](#mac--hmac)
 
 ## Classical Ciphers
 ### Caesar Cipher
