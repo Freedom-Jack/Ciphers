@@ -16,17 +16,17 @@ In this project (more like codes for fun lol), I want to show some modern crypto
 ## List of Topics:
 * Classical Ciphers:
    * [Caesar](#caesar-cipher)
-   * Affine
-   * Vigenere
+   * [Affine](#affine-cipher)
+   * [Vigenere](#vigenere-cipher)
 * Symmetric Ciphers:
-   * DES / AES
+   * [DES / AES](#des-/-aes)
 * Asymmetric Ciphers:
-   * RSA
-   * Chinese Remainder Theorem
-   * Miller-Rabin Primality Test
+   * [RSA](#rsa)
+   * [Chinese Remainder Theorem](#chinese-remainder-theorem)
+   * [Miller-Rabin Primality Test](#miller-mabin-primality-test)
 * Cryptological Hash Fucntions and Applications:
-   * Signature
-   * [MAC/HMAC](#MAC\/HMAC)
+   * [Signature](#signature)
+   * [MAC / HMAC](#mac-/-hmac)
 
 ## Classical Ciphers
 ### Caesar Cipher
@@ -78,7 +78,7 @@ Miller-Rabin Primality test is a test utilize the contraposition of Fermat's lit
 ### Signature
 One of the use cases of cryptographic hash function in secure communication is signature. The signature is actually the hashed value of the message, which usually send with the message itself. By comparing the signature and the hash generated from the received message, the receiver can tell whether the message is genuine or not.
 
-### MAC/HMAC
+### MAC / HMAC
 MAC or HMAC stands for **hash-based message authentication code**, it is a specific type authentication method using cryptographic hash functions. It provides data integrity and sender integrity to the secure communication system.
 
 ![HMAC](images/HMAC.png)
