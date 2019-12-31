@@ -85,4 +85,4 @@ MAC or HMAC stands for **hash-based message authentication code**, it is a speci
 
 ---
 Author: Qijin(Jack) Xu\
-Lastly Updated: 2019-12-22
+Lastly Updated: 2019-12-31
