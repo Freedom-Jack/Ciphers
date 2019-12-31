@@ -15,7 +15,7 @@ In this project (more like codes for fun lol), I want to show some modern crypto
 
 ## List of Topics:
 * Classical Ciphers:
-   * Caesar
+   * [Caesar](###caesar-cipher)
    * Affine
    * Vigenere
 * Symmetric Ciphers:
@@ -26,7 +26,7 @@ In this project (more like codes for fun lol), I want to show some modern crypto
    * Miller-Rabin Primality Test
 * Cryptological Hash Fucntions and Applications:
    * Signature
-   * MAC/HMAC
+   * [MAC/HMAC](###MAC/HMAC)
 
 ## Classical Ciphers
 ### Caesar Cipher
