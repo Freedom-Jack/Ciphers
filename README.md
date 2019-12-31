@@ -23,7 +23,7 @@ In this project (more like codes for fun lol), I want to show some modern crypto
 * Asymmetric Ciphers:
    * [RSA](#rsa)
    * [Chinese Remainder Theorem](#chinese-remainder-theorem)
-   * [Miller-Rabin Primality Test](#miller-mabin-primality-test)
+   * [Miller-Rabin Primality Test](#miller-rabin-primality-test)
 * Cryptological Hash Fucntions and Applications:
    * [Signature](#signature)
    * [MAC / HMAC](#mac-/-hmac)
